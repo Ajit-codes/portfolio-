@@ -55,19 +55,67 @@ navLinks.forEach(link => {
 // Contact Form Submission
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
+        // Don't prevent default - let the form submit to Formspree
+        
+        // Show loading spinner
+        const spinner = document.getElementById('loading-spinner');
+        const submitBtn = this.querySelector('button[type="submit"]');
+        const btnText = submitBtn.querySelector('span');
+        const alertContainer = document.getElementById('alert-container');
+        
+        // Update button state
+        spinner.classList.remove('d-none');
+        btnText.textContent = 'Sending...';
+        submitBtn.disabled = true;
+        
+        // Add fetch to track form submission status
+        fetch(this.action, {
+            method: this.method,
+            body: new FormData(this),
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                // Success message
+                alertContainer.innerHTML = `
+                    <div class="alert alert-success">
+                        <i class="fas fa-check-circle me-2"></i>
+                        Thank you for your message! I'll get back to you soon.
+                    </div>
+                `;
+                // Reset form
+                contactForm.reset();
+            } else {
+                // Error message
+                alertContainer.innerHTML = `
+                    <div class="alert alert-danger">
+                        <i class="fas fa-exclamation-circle me-2"></i>
+                        Oops! There was a problem sending your message. Please try again.
+                    </div>
+                `;
+                throw new Error('Form submission failed');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alertContainer.innerHTML = `
+                <div class="alert alert-danger">
+                    <i class="fas fa-exclamation-circle me-2"></i>
+                    Oops! There was a problem sending your message. Please try again.
+                </div>
+            `;
+        })
+        .finally(() => {
+            // Reset button state
+            spinner.classList.add('d-none');
+            btnText.textContent = 'Send Message';
+            submitBtn.disabled = false;
+        });
+        
+        // Prevent the default form submission since we're handling it with fetch
         e.preventDefault();
-        
-        // Get form values
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const subject = document.getElementById('subject').value;
-        const message = document.getElementById('message').value;
-        
-        // Display form submission message
-        alert(`Thank you, ${name}! Your message has been received. I'll get back to you soon.`);
-        
-        // Reset form
-        contactForm.reset();
     });
 }
 
