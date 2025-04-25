@@ -2,12 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
     <title>Ajit Panja - Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <!-- Remove Tailwind CSS -->
     
     <style>
         :root {
@@ -1063,6 +1062,403 @@
                 font-size: 1rem;
             }
         }
+        
+        /* Responsive Styles */
+        @media (max-width: 991.98px) {
+            .navbar-brand {
+                font-size: 1.4rem;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-content h2 {
+                font-size: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .project-card .card-img-top {
+                height: 180px;
+            }
+        }
+        
+        @media (max-width: 767.98px) {
+            body {
+                padding-top: 60px;
+            }
+            
+            .navbar {
+                padding: 10px 0;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+            
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-content h2 {
+                font-size: 1.2rem;
+            }
+            
+            .project-card .card-img-top {
+                height: 160px;
+            }
+            
+            .navbar-collapse {
+                background-color: rgba(18, 18, 18, 0.95);
+                padding: 20px;
+                border-radius: 8px;
+                margin-top: 10px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            }
+            
+            .navbar-nav .nav-item {
+                margin-bottom: 8px;
+            }
+            
+            .social-links a {
+                width: 35px;
+                height: 35px;
+                margin: 0 5px;
+            }
+        }
+        
+        @media (max-width: 575.98px) {
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .timeline-container {
+                padding-left: 30px;
+            }
+            
+            .timeline-marker {
+                left: -30px;
+                width: 16px;
+                height: 16px;
+            }
+            
+            .contact-form {
+                padding: 20px;
+            }
+            
+            .card-body {
+                padding: 1.25rem;
+            }
+        }
+        
+        /* Hamburger Menu Styling */
+        .navbar-toggler {
+            border: none;
+            padding: 10px;
+            height: 40px;
+            width: 40px;
+            position: relative;
+            transition: all 0.3s ease;
+            background-color: rgba(255, 152, 0, 0.1);
+            border-radius: 8px;
+        }
+        
+        .navbar-toggler:focus {
+            box-shadow: 0 0 0 0.25rem rgba(255, 152, 0, 0.25);
+            outline: none;
+        }
+        
+        .navbar-toggler-icon {
+            background-image: none !important;
+            display: inline-block;
+            width: 1.5em;
+            height: 1.5em;
+            vertical-align: middle;
+            position: relative;
+        }
+        
+        .navbar-toggler-icon:before,
+        .navbar-toggler-icon:after,
+        .navbar-toggler-icon span {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: #ff9800;
+            position: absolute;
+            left: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-toggler-icon:before {
+            top: 0;
+        }
+        
+        .navbar-toggler-icon span {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .navbar-toggler-icon:after {
+            bottom: 0;
+        }
+        
+        .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
+            transform: translateY(8px) rotate(45deg);
+        }
+        
+        .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon span {
+            opacity: 0;
+        }
+        
+        .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+        
+        /* Fixed header for mobile */
+        @media (max-width: 991.98px) {
+            .navbar-collapse {
+                max-height: 85vh;
+                overflow-y: auto;
+                transition: all 0.3s ease;
+            }
+            
+            .navbar-nav {
+                padding: 10px 0;
+            }
+            
+            .nav-item {
+                margin-bottom: 8px;
+            }
+            
+            .nav-link {
+                display: block;
+                padding: 10px 15px;
+                border-radius: 5px;
+                transition: all 0.3s ease;
+            }
+            
+            .nav-link:hover {
+                background-color: rgba(255, 152, 0, 0.1);
+            }
+        }
+        
+        /* Responsive home section */
+        @media (max-width: 767.98px) {
+            #home {
+                padding-top: 80px !important;
+                min-height: auto;
+            }
+            
+            #about, #projects, #skills, #journey, #contact {
+                padding-top: 80px !important;
+                padding-bottom: 60px !important;
+            }
+            
+            .hero-img {
+                margin-bottom: 30px;
+                max-width: 200px;
+                margin: 0 auto 30px;
+            }
+        }
+        
+        /* Enhanced Responsive Styles */
+        /* Extra small devices (phones, less than 576px) */
+        @media (max-width: 575.98px) {
+            .navbar-brand {
+                font-size: 1.1rem;
+            }
+            
+            .navbar-brand .text-white-50 {
+                font-size: 10px;
+            }
+            
+            .hero-content h1 {
+                font-size: 1.6rem;
+                line-height: 1.3;
+            }
+            
+            .hero-content h2 {
+                font-size: 1.1rem;
+            }
+            
+            .hero-content p {
+                font-size: 0.9rem;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .col-6 {
+                padding: 0 5px;
+            }
+            
+            .row {
+                margin-left: -5px;
+                margin-right: -5px;
+            }
+            
+            .btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.85rem;
+            }
+            
+            .social-icon-link {
+                width: 40px !important;
+                height: 40px !important;
+            }
+            
+            .display-6 {
+                font-size: 1.5rem;
+            }
+            
+            .timeline-content {
+                padding: 15px;
+            }
+            
+            .timeline-title {
+                font-size: 1rem;
+            }
+            
+            .timeline-subtitle {
+                font-size: 0.85rem;
+            }
+            
+            .badge {
+                font-size: 0.65rem;
+            }
+        }
+        
+        /* Small devices (landscape phones, 576px and up) */
+        @media (min-width: 576px) and (max-width: 767.98px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-content h2 {
+                font-size: 1.3rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+        
+        /* Medium devices (tablets, 768px and up) */
+        @media (min-width: 768px) and (max-width: 991.98px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .project-card .card-img-top {
+                height: 180px;
+            }
+        }
+        
+        /* Large devices (desktops, 992px and up) */
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+            .container {
+                max-width: 960px;
+                padding: 0 15px;
+            }
+        }
+        
+        /* Extra large devices (large desktops, 1200px and up) */
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 1140px;
+            }
+            
+            .hero-content h1 {
+                font-size: 3.5rem;
+            }
+            
+            .section-title {
+                font-size: 2.8rem;
+            }
+            
+            .project-card .card-img-top {
+                height: 220px;
+            }
+        }
+        
+        /* Extra extra large devices (ultra large desktops, 1400px and up) */
+        @media (min-width: 1400px) {
+            .container {
+                max-width: 1320px;
+            }
+            
+            .hero-content h1 {
+                font-size: 4rem;
+            }
+            
+            .project-card .card-img-top {
+                height: 240px;
+            }
+        }
+        
+        /* Fix for Safari mobile issues */
+        @supports (-webkit-touch-callout: none) {
+            .min-vh-100 {
+                min-height: -webkit-fill-available;
+            }
+        }
+        
+        /* Responsive image handling */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* Prevent content from being hidden under fixed navbar on anchor navigation */
+        :target {
+            scroll-margin-top: 85px;
+        }
+        
+        /* Improved mobile navigation and spacing */
+        @media (max-width: 767.98px) {
+            section {
+                padding: 50px 0;
+            }
+            
+            .navbar-collapse {
+                max-height: 80vh;
+                overflow-y: auto;
+            }
+            
+            .project-card, .contact-form, .glass-card, .testimonial {
+                margin-bottom: 20px;
+            }
+            
+            .pb-5 {
+                padding-bottom: 2rem !important;
+            }
+            
+            .pt-5 {
+                padding-top: 2rem !important;
+            }
+            
+            .my-5 {
+                margin-top: 2rem !important;
+                margin-bottom: 2rem !important;
+            }
+            
+            .mb-5 {
+                margin-bottom: 2rem !important;
+            }
+            
+            .mt-5 {
+                margin-top: 2rem !important;
+            }
+        }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -1082,36 +1478,41 @@
                     </div>
                 </a>
                 
-                <!-- Mobile Toggle Button -->
-                <button class="navbar-toggler border-0 px-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
-                        style="background-color: rgba(255, 87, 34, 0.2);">
-                    <span class="navbar-toggler-icon"></span>
+                <!-- Mobile Toggle Button - Custom styled hamburger -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                        <span></span>
+                    </span>
                 </button>
                 
-                <!-- Nav Items -->
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav gap-1">
+                <!-- Nav Items with slide down animation -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto gap-1">
                         <li class="nav-item">
-                            <a href="#home" class="nav-link px-3 py-2 rounded-pill">Home</a>
+                            <a href="#home" class="nav-link px-3 py-2 rounded-pill" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#about" class="nav-link px-3 py-2 rounded-pill">About</a>
+                            <a href="#about" class="nav-link px-3 py-2 rounded-pill" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">About</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#projects" class="nav-link px-3 py-2 rounded-pill">Projects</a>
+                            <a href="#projects" class="nav-link px-3 py-2 rounded-pill" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Projects</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#skills"><i class="fas fa-cogs d-lg-none me-2"></i>Skills</a>
+                            <a class="nav-link" href="#skills" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
+                                <i class="fas fa-cogs d-lg-none me-2"></i>Skills
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#journey"><i class="fas fa-chart-line d-lg-none me-2"></i>Journey</a>
+                            <a class="nav-link" href="#journey" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
+                                <i class="fas fa-chart-line d-lg-none me-2"></i>Journey
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#contact" class="nav-link px-3 py-2 rounded-pill">Contact</a>
+                            <a href="#contact" class="nav-link px-3 py-2 rounded-pill" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Contact</a>
                         </li>
-                        <li class="nav-item ms-2">
-                            <a href="#contact" class="btn btn-warning btn-sm px-3 py-2 rounded-pill">
+                        <li class="nav-item mt-2 mt-lg-0 ms-lg-2">
+                            <a href="#contact" class="btn btn-warning btn-sm px-3 py-2 rounded-pill w-100">
                                 <i class="fas fa-envelope me-1"></i> Hire Me
                             </a>
                         </li>
@@ -1121,70 +1522,21 @@
         </nav>
     </header>
 
-    <!-- Add this CSS to style active nav links -->
-    <style>
-        .navbar .nav-link {
-            position: relative;
-            transition: all 0.3s ease;
-        }
-        
-        .navbar .nav-link:hover, .navbar .nav-link.active {
-            color: #ff9800 !important;
-            background-color: rgba(255, 152, 0, 0.1);
-        }
-        
-        .navbar .nav-link.active::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 5px;
-            height: 5px;
-            background-color: #ff9800;
-            border-radius: 50%;
-        }
-        
-        .social-icon-link:hover, .social-links a div:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(255, 87, 34, 0.3);
-            background-color: rgba(255, 87, 34, 0.3) !important;
-        }
-        
-        input:focus, textarea:focus {
-            border-color: #ff9800 !important;
-            box-shadow: 0 0 0 0.25rem rgba(255, 152, 0, 0.25) !important;
-        }
-        
-        .btn-warning {
-            background-color: #ff9800;
-            border-color: #ff9800;
-            transition: all 0.3s ease;
-        }
-        
-        .btn-warning:hover {
-            background-color: #ff5722;
-            border-color: #ff5722;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(255, 87, 34, 0.3);
-        }
-    </style>
-
+    <!-- Home section with responsive adjustments -->
     <section id="home" class="py-5 min-vh-100 d-flex align-items-center position-relative overflow-hidden" style="background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(61, 10, 31, 0.9), rgba(121, 18, 36, 0.8)); background-size: 200% 200%; animation: gradientAnimation 15s ease infinite;">
         <div class="container position-relative" style="z-index: 10;">
             <div class="row align-items-center">
-                <!-- Content column -->
-                <div class="col-lg-6 mb-5 mb-lg-0">
+                <!-- Content column - Enhanced mobile responsiveness -->
+                <div class="col-lg-6 mb-5 mb-lg-0 text-center text-lg-start">
                     <div>
-                        <!-- Removing the Data Scientist badge -->
-                        <h1 class="mb-4 fw-bold display-4">Hello, I'm <span style="background: linear-gradient(90deg, #FFC107, #FF9800, #FF5722); -webkit-background-clip: text; background-clip: text; color: transparent; white-space: nowrap;">Ajit Panja</span></h1>
-                        <h2 class="fs-2 mb-4">Turning data into <span style="position: relative; color: #FF9800;">insights</span></h2>
-                        <p class="fs-5 mb-5 text-white-50">BCA student at Netaji Subhas University with strong programming skills in Java, Python, and C++. I specialize in data analysis and building web applications.</p>
-                        <div class="d-flex flex-wrap gap-3 mb-5">
-                            <a href="#projects" class="btn btn-primary px-4 py-2 rounded-pill fw-semibold">View My Work</a>
-                            <a href="#contact" class="btn btn-outline-light px-4 py-2 rounded-pill fw-semibold">Contact Me</a>
+                        <h1 class="mb-3 mb-lg-4 fw-bold display-4">Hello, I'm <span style="background: linear-gradient(90deg, #FFC107, #FF9800, #FF5722); -webkit-background-clip: text; background-clip: text; color: transparent; white-space: nowrap;">Ajit Panja</span></h1>
+                        <h2 class="fs-2 mb-3 mb-lg-4">Turning data into <span style="position: relative; color: #FF9800;">insights</span></h2>
+                        <p class="fs-5 mb-4 mb-lg-5 text-white-50">BCA student at Netaji Subhas University with strong programming skills in Java, Python, and C++. I specialize in data analysis and building web applications.</p>
+                        <div class="d-flex flex-wrap gap-2 gap-sm-3 mb-4 mb-lg-5 justify-content-center justify-content-lg-start">
+                            <a href="#projects" class="btn btn-primary px-3 px-md-4 py-2 rounded-pill fw-semibold">View My Work</a>
+                            <a href="#contact" class="btn btn-outline-light px-3 px-md-4 py-2 rounded-pill fw-semibold">Contact Me</a>
                         </div>
-                        <div class="d-flex gap-3">
+                        <div class="d-flex gap-2 gap-sm-3 justify-content-center justify-content-lg-start">
                             <a href="https://github.com/code-ajit" class="d-flex align-items-center justify-content-center rounded-circle social-icon-link" style="width: 48px; height: 48px; background-color: rgba(255, 87, 34, 0.2); color: white; transition: all 0.3s ease;">
                                 <i class="fab fa-github fa-lg"></i>
                             </a>
@@ -1198,59 +1550,59 @@
                     </div>
                 </div>
                 
-                <!-- Status/Stats column -->
+                <!-- Profile card column -->
                 <div class="col-lg-6">
-                    <div class="row g-4">
-                        <!-- Profile Card -->
-                        <div class="col-md-12 mb-4">
+                    <div class="row g-3 g-lg-4">
+                        <!-- Profile Card - Enhanced for mobile -->
+                        <div class="col-md-12 mb-3 mb-lg-4">
                             <div class="card bg-dark border border-secondary shadow-lg" style="border-radius: 16px; overflow: hidden;">
-                                <div class="card-body p-4">
-                                    <div class="d-flex align-items-center mb-4">
-                                        <div class="position-relative me-4">
-                                            <img src="IMG-20250329-WA0003.jpg" alt="Ajit Panja" class="rounded-circle" width="90" height="90" style="object-fit: cover; border: 3px solid #ff9800;">
-                                            <span class="position-absolute bottom-0 end-0 bg-success rounded-circle p-1" style="width: 18px; height: 18px; border: 2px solid #121212;"></span>
+                                <div class="card-body p-3 p-sm-4">
+                                    <div class="d-flex flex-column flex-sm-row align-items-center mb-3 mb-sm-4">
+                                        <div class="position-relative me-sm-4 mb-3 mb-sm-0">
+                                            <img src="IMG-20250329-WA0003.jpg" alt="Ajit Panja" class="rounded-circle" width="80" height="80" style="object-fit: cover; border: 3px solid #ff9800;">
+                                            <span class="position-absolute bottom-0 end-0 bg-success rounded-circle p-1" style="width: 16px; height: 16px; border: 2px solid #121212;"></span>
                                         </div>
-                                        <div>
+                                        <div class="text-center text-sm-start">
                                             <h5 class="mb-1 text-white">Ajit Panja</h5>
                                             <p class="mb-0 small text-white-50">BCA Student | Data Scientist</p>
                                         </div>
                                     </div>
                                     
-                                    <div class="d-flex flex-wrap gap-2 mb-3">
-                                        <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill">Java</span>
-                                        <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill">Python</span>
-                                        <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill">C++</span>
-                                        <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill">SQL</span>
+                                    <div class="d-flex flex-wrap gap-2 mb-3 justify-content-center justify-content-sm-start">
+                                        <span class="badge bg-primary bg-opacity-10 text-primary px-2 px-sm-3 py-1 py-sm-2 rounded-pill">Java</span>
+                                        <span class="badge bg-primary bg-opacity-10 text-primary px-2 px-sm-3 py-1 py-sm-2 rounded-pill">Python</span>
+                                        <span class="badge bg-primary bg-opacity-10 text-primary px-2 px-sm-3 py-1 py-sm-2 rounded-pill">C++</span>
+                                        <span class="badge bg-primary bg-opacity-10 text-primary px-2 px-sm-3 py-1 py-sm-2 rounded-pill">SQL</span>
                                     </div>
                                     
                                     <ul class="list-unstyled mb-0">
-                                        <li class="d-flex align-items-center mb-3">
-                                            <span class="me-3 d-flex align-items-center justify-content-center rounded-circle bg-dark" style="width: 34px; height: 34px; border: 1px solid #333;">
+                                        <li class="d-flex align-items-center mb-2 mb-sm-3">
+                                            <span class="me-2 me-sm-3 d-flex align-items-center justify-content-center rounded-circle bg-dark" style="width: 30px; height: 30px; border: 1px solid #333;">
                                                 <i class="fas fa-university text-warning"></i>
                                             </span>
-                                            <div class="text-white-50">Netaji Subhas University, Jamshedpur</div>
+                                            <div class="text-white-50 small">Netaji Subhas University, Jamshedpur</div>
                                         </li>
-                                        <li class="d-flex align-items-center mb-3">
-                                            <span class="me-3 d-flex align-items-center justify-content-center rounded-circle bg-dark" style="width: 34px; height: 34px; border: 1px solid #333;">
+                                        <li class="d-flex align-items-center mb-2 mb-sm-3">
+                                            <span class="me-2 me-sm-3 d-flex align-items-center justify-content-center rounded-circle bg-dark" style="width: 30px; height: 30px; border: 1px solid #333;">
                                                 <i class="fas fa-graduation-cap text-warning"></i>
                                             </span>
-                                            <div class="text-white-50">Bachelor of Computer Applications</div>
+                                            <div class="text-white-50 small">Bachelor of Computer Applications</div>
                                         </li>
                                         <li class="d-flex align-items-center">
-                                            <span class="me-3 d-flex align-items-center justify-content-center rounded-circle bg-dark" style="width: 34px; height: 34px; border: 1px solid #333;">
+                                            <span class="me-2 me-sm-3 d-flex align-items-center justify-content-center rounded-circle bg-dark" style="width: 30px; height: 30px; border: 1px solid #333;">
                                                 <i class="fas fa-map-marker-alt text-warning"></i>
                                             </span>
-                                            <div class="text-white-50">Jamshedpur, Jharkhand, India</div>
+                                            <div class="text-white-50 small">Jamshedpur, Jharkhand, India</div>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         
-                        <!-- Stats -->
+                        <!-- Stats cards - Improved for small screens -->
                         <div class="col-6 col-md-4">
                             <div class="card bg-dark border border-secondary h-100 shadow" style="border-radius: 16px;">
-                                <div class="card-body p-3 text-center">
+                                <div class="card-body p-2 p-sm-3 text-center">
                                     <div class="display-6 fw-bold text-warning mb-1">4+</div>
                                     <div class="text-white-50 small">Programming Languages</div>
                                 </div>
@@ -1258,15 +1610,15 @@
                         </div>
                         <div class="col-6 col-md-4">
                             <div class="card bg-dark border border-secondary h-100 shadow" style="border-radius: 16px;">
-                                <div class="card-body p-3 text-center">
+                                <div class="card-body p-2 p-sm-3 text-center">
                                     <div class="display-6 fw-bold text-warning mb-1">67%</div>
                                     <div class="text-white-50 small">BCA Score</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-4">
+                        <div class="col-12 col-md-4 mt-3 mt-md-0">
                             <div class="card bg-dark border border-secondary h-100 shadow" style="border-radius: 16px;">
-                                <div class="card-body p-3 text-center">
+                                <div class="card-body p-2 p-sm-3 text-center">
                                     <div class="display-6 fw-bold text-warning mb-1">3+</div>
                                     <div class="text-white-50 small">Web Projects</div>
                                 </div>
@@ -1644,7 +1996,7 @@
             <div class="row">
                 <div class="col-lg-6 mb-4">
                     <div class="contact-form">
-                        <form id="contactForm" action="https://formspree.io/f/yourformid" method="POST">
+                        <form id="contactForm" action="https://formspree.io/f/ajitpanja100@gmail.com" method="POST">
                             <div class="mb-3">
                                 <label for="name" class="form-label">Your Name</label>
                                 <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
@@ -1711,31 +2063,47 @@
         </div>
     </section>
 
-    <!-- Fix for the section padding to avoid navbar overlap -->
-    <section#home {
-        padding-top: 120px !important;
-        margin-top: 0 !important;
-    }
-
-    section:not(#home) {
-        padding-top: 140px !important;
-        padding-bottom: 80px !important;
-        margin-top: 0 !important;
-    }
-    
-    header.fixed-top {
-        position: fixed;
-        z-index: 1030;
-    }
-
-    @media (max-width: 991.98px) {
-        body {
-            padding-top: 70px;
-        }
-        
-        .navbar {
-            padding: 10px 0;
-        }
-    }
+    <script>
+        // Add active class to the current nav item based on scroll position
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section');
+            const navItems = document.querySelectorAll('.navbar-nav .nav-link');
+            
+            function updateActiveNavItem() {
+                let currentSection = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    
+                    if (pageYOffset >= (sectionTop - 100)) {
+                        currentSection = section.getAttribute('id');
+                    }
+                });
+                
+                navItems.forEach(item => {
+                    item.classList.remove('active');
+                    if (item.getAttribute('href') === `#${currentSection}`) {
+                        item.classList.add('active');
+                    }
+                });
+            }
+            
+            window.addEventListener('scroll', updateActiveNavItem);
+            updateActiveNavItem();
+            
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(event) {
+                const navbarCollapse = document.querySelector('.navbar-collapse');
+                const navbarToggler = document.querySelector('.navbar-toggler');
+                
+                if (navbarCollapse.classList.contains('show') && 
+                    !navbarCollapse.contains(event.target) && 
+                    !navbarToggler.contains(event.target)) {
+                    navbarCollapse.classList.remove('show');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
